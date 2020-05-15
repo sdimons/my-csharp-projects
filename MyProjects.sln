@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopwatchApp", "StopwatchAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflowPostApp", "StackOverflowPostApp\StackOverflowPostApp.csproj", "{F0874C2A-506D-4469-8B96-F341591871C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackApp", "StackApp\StackApp.csproj", "{9DE710F0-4612-41A7-9AD6-7E371630D060}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{F0874C2A-506D-4469-8B96-F341591871C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0874C2A-506D-4469-8B96-F341591871C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0874C2A-506D-4469-8B96-F341591871C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE710F0-4612-41A7-9AD6-7E371630D060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE710F0-4612-41A7-9AD6-7E371630D060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE710F0-4612-41A7-9AD6-7E371630D060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE710F0-4612-41A7-9AD6-7E371630D060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{F22A550D-1579-498D-BB7C-FA9FE8BCF51F} = {97C97FDF-0B1A-4298-ACF1-1F7F9F051D56}
 		{57A80815-533C-4F3D-AC7C-2EE6DD3D42F8} = {97C97FDF-0B1A-4298-ACF1-1F7F9F051D56}
 		{F0874C2A-506D-4469-8B96-F341591871C5} = {97C97FDF-0B1A-4298-ACF1-1F7F9F051D56}
+		{9DE710F0-4612-41A7-9AD6-7E371630D060} = {97C97FDF-0B1A-4298-ACF1-1F7F9F051D56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
