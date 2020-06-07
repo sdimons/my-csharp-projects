@@ -1,0 +1,27 @@
+﻿Workflows:
+1) Database First (project DbFirst)
+	- We design our tables
+	- EF generates domain classes
+2) Code First
+	- We create our domain classes 
+	- EF generates database tables
+3) Model First
+	- We create a UML diagram
+	- EF generates domain classes and database
+------------------------------------------------------------------------------------------
+EF installation:
+1) NuGet Package Manager -> Package Manager Console -> PM> install-package EntityFramework
+2) Right Click the Project -> Add -> New item -> ADO.NET Entity Data Model
+3) .tt (T4 template file) - to generate code based on a template
+---------------------------------
+Database First (project DbFirst):
+1) Entity Data Model Wizard
+	- PlutoModel (name of ADO.NET Entity Data Model)
+	- PlutoDbContext
+	- Tick -> Pluralize or singularize generated object names
+2) EDMX designer
+	- Zooming: Ctrl + Mouse Wheel
+	- If diagram looks messy: Diagram -> Layout Diagram
+	- Exporting as image: Diagram -> Export as Image
+	- Collapsing/Expanding: Diagram -> Collapse All/Expand All
+	- Format display changing: Scalar Property Format -> Display Name/Display Name and Type
