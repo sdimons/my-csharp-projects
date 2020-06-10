@@ -29,7 +29,7 @@ Database First (project DbFirst):
 	- Content of edmx file: PlutoModel.edmx -> Open With... -> XML (Text) Editor
 		- two sections
 			- EF runtime content (everything about our model), 3 subsection:
-				- SSDL content (storage models = represntation of DB)
+				- SSDL content (storage models = represntation of the DB objects)
 				- CSDL content (conceptual models = representation of entities)
 				- C-S mapping content (mapping between storage models and conceptual models)
 			- EF designer content (visual representation)
@@ -49,3 +49,22 @@ Database First (project DbFirst):
 	- Deleting a table
 		- EDMX designer -> right click -> Update Model from Database...
 			- EF knows that we have deleted, but EF does not delete it from the model -> delete this entity from the conceptual model manually
+5) Importing Stored Procedures
+	- EDMX designer -> right click -> Update Model from Database... -> Check: Stored Procedures and Functions
+	- How to see the Stored Procedures in a visual way?
+		- EDMX designer -> right click -> Model Browser -> Function Imports
+6) Function Imports
+	- EDMX designer -> right click -> Update Model from Database... -> Check: Stored Procedures and Functions
+	- How to see the Functions in a visual way?
+		- EDMX designer -> right click -> Model Browser -> Function Imports
+			- Change the function name in the conceptual model : Select the function -> double click -> Edit Function Import -> Edit: Function Import Name
+			- Change Return Type (if the return type = one of the entities (Entity Types)): Select a function -> double click -> Edit Function Import 
+																							-> Check: Entities -> Choose entity, then delete the old Complex Type
+	- When to use Complex Types?
+		- Result = table 1 + table 2
+		- Result = the part of large table
+	- If a comple type was deleted...
+		- EDMX designer -> right click -> Model Browser -> Function Imports -> select the function
+		- Click on "Get Column Information"
+		- Click on "Create New Complext Type"
+		- Change the name if you need it
