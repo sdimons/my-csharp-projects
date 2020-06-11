@@ -68,3 +68,15 @@ Database First (project DbFirst):
 		- Click on "Get Column Information"
 		- Click on "Create New Complext Type"
 		- Change the name if you need it
+7) Working with Enums
+	- Add New Enum Type: EDMX designer -> right click -> Model Browser -> Enum Types -> right click -> Add New Enum Type
+		- Give the name (CourseLevel)
+		- Specify the underlying type (Byte)
+		- Add the memberes (Beginner = 1, Inermediate = 2 ...)
+		- Select this new type in the type of our property of the entity (entity Course -> property Level -> Property -> Type = CourseLevel)
+	- Add an existing enum: EDMX designer -> right click -> Model Browser -> Enum Types -> right click -> Add New Enum Type
+		- Give the name, the name of the enum type = the name of the existing enum = "Level" both
+		- Specify the underlying type (Byte)
+		- Tick "Reference external type"
+		- Type "DbFirst.Level"
+		- Change the data type of "Level" property to "PlutoModel.Level"
