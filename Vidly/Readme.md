@@ -86,3 +86,14 @@ routes.MapMvcAttributeRoutes();
 [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
 public ActionResult ByReleaseDate(int year, int month) {...}
 ```
+
+## Passing Data to Views
+1) ```ViewData["RandomMovie"] = movie;```  
+```<h2>@(((Movie)ViewData["RandomMovie"]).Name)</h2>```
+2) ```ViewBag.RandomMovie = movie;```  
+```<h2>@ViewBag.RandomMovie</h2>```
+3) Where is model in the view (```return View(movie)```)?  
+```
+    var viewResult = new ViewResult();
+    viewResult.ViewData.Model
+```

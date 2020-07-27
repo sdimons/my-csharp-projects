@@ -16,6 +16,11 @@ namespace Vidly.Controllers
             {
                 Name = "Shrek!"
             };
+
+            // ViewData["RandomMovie"] = movie;
+            // OR
+            // ViewBag.RandomMovie = movie;
+            //return View();
             return View(movie);
             //return Content("Hello World!");
             //return HttpNotFound();
