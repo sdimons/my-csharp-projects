@@ -74,3 +74,15 @@ routes.MapRoute(
                 );
 ```
 source:  http://localhost:58923/movies/released/2014/04  
+
+## Attribute Routing
+
+1. RouteConfig.cs:
+```
+routes.MapMvcAttributeRoutes();
+```
+2.
+```
+[Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
+public ActionResult ByReleaseDate(int year, int month) {...}
+```
