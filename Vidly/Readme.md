@@ -96,4 +96,30 @@ public ActionResult ByReleaseDate(int year, int month) {...}
 ```
     var viewResult = new ViewResult();
     viewResult.ViewData.Model
+```  
+
+## View Models
+1.
+```
+public class RandomMovieViewModel
+{
+    public Movie Movie { get; set; }
+    public List<Customer> Customers { get; set; }
+}
+```
+2.
+```
+var viewModel = new RandomMovieViewModel
+{
+    Movie = movie,
+    Customers = customers
+};
+```
+3.
+```
+return View(viewModel)
+```
+4.
+```
+<h2>@Model.Movie.Name</h2>
 ```
