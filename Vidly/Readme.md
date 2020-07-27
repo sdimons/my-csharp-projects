@@ -122,4 +122,17 @@ return View(viewModel)
 4.
 ```
 <h2>@Model.Movie.Name</h2>
+```  
+
+## Razor Syntax
+Work with css classes in a razor page:  
+1.
+```
+@{ 
+    var className = Model.Customers.Count > 2 ? "popular" : null;
+}
+```  
+2.
+```
+<h2 class="@className">@Model.Movie.Name</h2>
 ```
