@@ -9,7 +9,7 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies/Random
+        // GET: movies/random
         public ActionResult Random()
         {
             var movie = new Movie()
@@ -21,6 +21,26 @@ namespace Vidly.Controllers
             //return HttpNotFound();
             //return new EmptyResult();
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
+        }
+
+        // movies/edit/1
+        // movies/edit?id=1
+        public ActionResult Edit(int id)
+        {
+            return Content("id = " + id);
+        }
+
+        // movies
+        // movies?pageIndex=1
+        // movies?pageIndex=1&sortBy=ReleaseDate
+        // movies?sortBy=ReleaseDate
+        public ActionResult Index(int? pageIndex, string sortBy)
+        {
+            if (!pageIndex.HasValue)
+                pageIndex = 1;
+            if (string.IsNullOrWhiteSpace(sortBy))
+                sortBy = "Name";
+            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
     }
 }

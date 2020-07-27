@@ -6,7 +6,7 @@
 
 ## MVC in Action
 
-Ctrl + F5 - Compile and Run application
+**Ctrl + F5** - Compile and Run application
 
 ## Adding a Free Bootstrap Theme
 
@@ -21,14 +21,30 @@ bundles.Add(new StyleBundle("~/Content/css").Include(
 
 ## Action Results
 
-1) ```return View(movie);```
-2) ```return Content("Hello World");```
-3) ```return HttpNotFound();```
-4) ```return new EmptyResult();```
+1) ```return View(movie);```  
+2) ```return Content("Hello World");```  
+3) ```return HttpNotFound();```  
+4) ```return new EmptyResult();```  
 5) 
 ```
    return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name"});
-```
+```  
+**Ctrl + Shift + B** - build application without opening a new tab browser  
+**Ctrl + Tab** - Switch tab  
 
-Ctrl + Shift + B - build application without opening a new tab browser
-Ctrl + Tab - Switch tab
+## Action Parameters
+```
+public ActionResult Edit(int id) {...}
+```
+source:  
+http://localhost:58923/movies/Edit/1  
+http://localhost:58923/movies/Edit?id=1  
+2) optional parameters
+``` 
+public ActionResult Index(int? pageIndex, string sortBy) {...} 
+```
+source:  
+http://localhost:58923/movies  
+http://localhost:58923/movies?pageIndex=1  
+http://localhost:58923/movies?pageIndex=1&sortBy=Name  
+http://localhost:58923/movies?sortBy=Name  
