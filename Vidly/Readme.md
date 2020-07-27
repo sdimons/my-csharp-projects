@@ -136,3 +136,10 @@ Work with css classes in a razor page:
 ```
 <h2 class="@className">@Model.Movie.Name</h2>
 ```
+
+## Partial Views
+**Ctrl + M + M** - collapse lines
+1. Add View "_NavBar" (with _ and in the folder Shared)
+2. Tick "Create as a partial View"
+3. ```@Html.Partial("_NavBar");```  
+with model: ```@Html.Partial("_NavBar", Model.Movie);```
