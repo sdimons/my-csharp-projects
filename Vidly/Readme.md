@@ -19,7 +19,16 @@ bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/site.css"));
 ```
 
+## Action Results
 
+1) ```return View(movie);```
+2) ```return Content("Hello World");```
+3) ```return HttpNotFound();```
+4) ```return new EmptyResult();```
+5) 
+```
+   return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name"});
+```
 
-
-
+Ctrl + Shift + B - build application without opening a new tab browser
+Ctrl + Tab - Switch tab
