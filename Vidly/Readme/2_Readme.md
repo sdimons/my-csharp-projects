@@ -67,3 +67,5 @@ PM> add-migration ApplyAnnotationsToCustomerName
 PM> update-database
 ```
 
+## Querying Objects
+
