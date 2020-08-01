@@ -77,4 +77,13 @@ Download Customers with MembershipType (by using **Include**):
 var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 ```
 
+## Shortcut to Package Manager Console
 
+Tools -> Options -> Keyboard: 
+1. Show command containing: "packagemanagerconsole"
+2. Press short keys: Alt+/, Alt+.
+
+Clear console:
+```
+PM> cls
+```

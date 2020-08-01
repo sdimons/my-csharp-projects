@@ -228,6 +228,7 @@
     <Content Include="Pdf\10.1 ASP.NET MVC Fundamentals Cheat Sheet.pdf" />
     <Content Include="Pdf\11.1 ASP.NET MVC Fundamentals - Exercise Hints.pdf" />
     <Content Include="Readme\2_Readme.md" />
+    <Content Include="Pdf\11.1 Entity Framework Cheat Sheet.pdf.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
