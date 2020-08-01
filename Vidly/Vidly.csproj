@@ -202,7 +202,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Readme.md" />
+    <Content Include="Readme\1_Readme.md" />
     <Content Include="Pdf\10.1 ASP.NET MVC Fundamentals Cheat Sheet.pdf" />
     <Content Include="Pdf\11.1 ASP.NET MVC Fundamentals - Exercise Hints.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
