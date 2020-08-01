@@ -17,3 +17,17 @@ Generate our database
 PM> update-database
 ```
 
+## Changing the Model
+
+```
+PM> add-migration AddIsSubscribedToCustomer
+```
+
+```
+PM> update-database
+```
+
+```
+PM> add-migration AddMembershipType
+```
+
