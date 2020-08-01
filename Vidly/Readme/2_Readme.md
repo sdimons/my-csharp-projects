@@ -47,4 +47,23 @@ public override void Up()
         }
 ```
 
+```
+PM> update-database
+```
+
+## Overriding Conventions
+
+```
+[Required]
+[StringLength(255)]
+public string Name { get; set; }
+```
+
+```
+PM> add-migration ApplyAnnotationsToCustomerName
+```
+
+```
+PM> update-database
+```
 
