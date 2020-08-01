@@ -70,3 +70,11 @@ PM> update-database
 ## Querying Objects
 
 ## Eager Loading
+
+Download Customers with MembershipType (by using **Include**):
+
+```
+var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+```
+
+
