@@ -69,3 +69,4 @@ PM> update-database
 
 ## Querying Objects
 
+## Eager Loading
