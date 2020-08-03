@@ -71,7 +71,7 @@ public ActionResult Create(NewCustomerViewModel viewModel)
 ```
 
 ## Saving Data
-
+Controller:
 ```
         [HttpPost]
         public ActionResult Create(Customer customer)
@@ -83,3 +83,24 @@ public ActionResult Create(NewCustomerViewModel viewModel)
         }
 ```
 
+## Edit Form
+Controller:
+```
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customer == null)
+                return HttpNotFound();
+            var viewModel = new CustomerFormViewModel()
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+            return View("CustomerForm", viewModel);
+        }
+```
+
+Date Formar in a view:
+```
+	@Html.TextBoxFor(m => m.Customer.Birthdate, "{0:dd.MM.yyyy}", new { @class = "form-control" })
+```
