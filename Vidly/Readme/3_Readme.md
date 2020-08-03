@@ -24,3 +24,15 @@ Checkbox:
         </label>
 </div>
 ```
+
+## Labels
+2 ways:
+1. Data Annotation  (you have to recompile)
+```
+[Display(Name = "Date of birth")]
+public DateTime? Birthdate { get; set; }
+```
+2. Html
+```
+<label for="Birthdate">Date of birth</label>
+```
