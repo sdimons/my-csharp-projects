@@ -104,3 +104,32 @@ Date Formar in a view:
 ```
 	@Html.TextBoxFor(m => m.Customer.Birthdate, "{0:dd.MM.yyyy}", new { @class = "form-control" })
 ```
+
+## Updating Data
+
+Hidden field (because we don't have id on our form):
+```
+@Html.HiddenFor(m => m.Customer.Id);
+```
+Controller:
+```
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            if (customer.Id == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+```
