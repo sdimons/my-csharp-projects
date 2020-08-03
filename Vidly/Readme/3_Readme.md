@@ -69,3 +69,17 @@ public ActionResult Create(NewCustomerViewModel viewModel)
 	return View();
 }
 ```
+
+## Saving Data
+
+```
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+```
+
