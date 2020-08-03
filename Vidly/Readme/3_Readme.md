@@ -54,3 +54,18 @@ Drop-down list:
         @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "[Select Membership Type]", new { @class = "form-control" })
     </div>
 ```
+
+## Model Binding
+
+View:
+```
+<button type="submit" class="btn btn-primary">Save</button>
+```
+Controller:
+```
+[HttpPost]
+public ActionResult Create(NewCustomerViewModel viewModel)
+{
+	return View();
+}
+```
