@@ -129,6 +129,7 @@ namespace Vidly.Controllers
         {
             if (movie.Id == 0)
             {
+                movie.CreateDate = DateTime.Now;
                 _context.Movies.Add(movie);
             }
             else
