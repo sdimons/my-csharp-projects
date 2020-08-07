@@ -104,3 +104,15 @@ View ("~/bundles/jqueryval" from BundleConfig.cs):
 }
 ```
 It doesn't work for any Custom Validations.
+
+## Anti-forgery Tokens
+View:
+```
+@Html.AntiForgeryToken()
+```
+Controller:
+```
+[ValidateAntiForgeryToken]
+public ActionResult Save(Customer customer)
+{...}
+```
