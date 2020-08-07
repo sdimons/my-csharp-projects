@@ -94,3 +94,13 @@ OR
 ```
 @Html.ValidationSummary(true, "Please fix the following errors")
 ```
+
+## Client-side Validation
+View ("~/bundles/jqueryval" from BundleConfig.cs):
+```
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+```
+It doesn't work for any Custom Validations.
