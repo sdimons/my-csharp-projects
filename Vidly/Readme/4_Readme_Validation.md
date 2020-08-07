@@ -84,3 +84,13 @@ Min18YearsIfAMember:
                 customer.MembershipTypeId == MembershipType.PayAsYouGo) {...}
 ...
 ```
+
+## Validation Summary
+View:
+```
+@Html.ValidationSummary()
+```
+OR
+```
+@Html.ValidationSummary(true, "Please fix the following errors")
+```
