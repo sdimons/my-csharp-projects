@@ -70,3 +70,17 @@ View:
 ```
 @Html.ValidationMessageFor(m => m.Customer.Birthdate)
 ```
+
+## Refactoring Magic Numbers
+MembershipType:
+```
+        public static readonly byte Uknown = 0;
+        public static readonly byte PayAsYouGo = 1;
+```
+Min18YearsIfAMember:
+```
+...
+            if (customer.MembershipTypeId == MembershipType.Uknown || 
+                customer.MembershipTypeId == MembershipType.PayAsYouGo) {...}
+...
+```
