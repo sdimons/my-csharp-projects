@@ -227,6 +227,10 @@
     <Compile Include="Migrations\202008051240217_AddRequiredAtributeToMoview.Designer.cs">
       <DependentUpon>202008051240217_AddRequiredAtributeToMoview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008091249088_AddRequiredToMovieName.cs" />
+    <Compile Include="Migrations\202008091249088_AddRequiredToMovieName.Designer.cs">
+      <DependentUpon>202008091249088_AddRequiredToMovieName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -372,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008051240217_AddRequiredAtributeToMoview.resx">
       <DependentUpon>202008051240217_AddRequiredAtributeToMoview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008091249088_AddRequiredToMovieName.resx">
+      <DependentUpon>202008091249088_AddRequiredToMovieName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
