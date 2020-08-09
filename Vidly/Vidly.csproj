@@ -231,6 +231,10 @@
     <Compile Include="Migrations\202008091249088_AddRequiredToMovieName.Designer.cs">
       <DependentUpon>202008091249088_AddRequiredToMovieName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008091306045_AddStringLengthToMovieName.cs" />
+    <Compile Include="Migrations\202008091306045_AddStringLengthToMovieName.Designer.cs">
+      <DependentUpon>202008091306045_AddStringLengthToMovieName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -379,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008091249088_AddRequiredToMovieName.resx">
       <DependentUpon>202008091249088_AddRequiredToMovieName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008091306045_AddStringLengthToMovieName.resx">
+      <DependentUpon>202008091306045_AddStringLengthToMovieName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
