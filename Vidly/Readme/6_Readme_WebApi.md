@@ -64,7 +64,7 @@ Search in Google : "postman rest client"
 PM> install-package automapper -version:4.1
 ```
 
-MappingProfile:
+Create a mapping profile first:
 ```
     public class MappingProfile : Profile
     {
@@ -76,11 +76,12 @@ MappingProfile:
     }
 ```
 
-Application_Start():
+Load the mapping profile during application startup (in global.asax.cs):
 ```
 Mapper.Initialize(c => c.AddProfile<MappingProfile>());
 ```
-Controller:
+
+To map objects:
 ```
 return Mapper.Map<Customer,CustomerDto>(customer);
 ```
@@ -89,6 +90,7 @@ return Mapper.Map<Customer,CustomerDto>(customer);
 var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
 ```
 
+Or to map to an existing object:
 ```
 Mapper.Map(customerDto, customerInDb);
 ```
