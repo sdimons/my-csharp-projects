@@ -102,3 +102,28 @@ In WebApiConfig:
     settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
     settings.Formatting = Formatting.Indented;
 ```
+
+## IHttpActionResult
+
+```
+[HttpPost]
+public IHttpActionResult CreateCustomer(CustomerDto customerDto)
+{...}
+```
+
+Helper methods:
+```
+return BadRequest();
+```
+
+```
+return NotFound();
+```
+
+```
+return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
+```
+
+```
+return Ok(Mapper.Map<Customer, CustomerDto>(customer));
+```
