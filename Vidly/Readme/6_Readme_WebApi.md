@@ -54,6 +54,9 @@ public void DeleteCustomer(int id)
 {...}
 ```
 
+## Testing an API
+Search in Google : "postman rest client"
+
 
 
 
