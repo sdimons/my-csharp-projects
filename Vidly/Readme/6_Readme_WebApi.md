@@ -59,3 +59,37 @@ Search in Google : "postman rest client"
 
 ##  Data Transfer Objects (DTO)
 
+##  Auto Mapper (to map objects)
+```
+PM> install-package automapper -version:4.1
+```
+
+MappingProfile:
+```
+    public class MappingProfile : Profile
+    {
+        public MappingProfile()
+        {
+            Mapper.CreateMap<Customer, CustomerDto>();
+            Mapper.CreateMap<CustomerDto, Customer>();
+        }
+    }
+```
+
+Application_Start():
+```
+Mapper.Initialize(c => c.AddProfile<MappingProfile>());
+```
+Controller:
+```
+return Mapper.Map<Customer,CustomerDto>(customer);
+```
+
+```
+var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
+```
+
+```
+Mapper.Map(customerDto, customerInDb);
+```
+
