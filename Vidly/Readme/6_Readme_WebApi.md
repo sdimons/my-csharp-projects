@@ -95,3 +95,10 @@ Or to map to an existing object:
 Mapper.Map(customerDto, customerInDb);
 ```
 
+## Using Camel Notation
+In WebApiConfig:
+```
+    var settings = config.Formatters.JsonFormatter.SerializerSettings;
+    settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+    settings.Formatting = Formatting.Indented;
+```
