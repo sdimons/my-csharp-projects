@@ -32,3 +32,29 @@ Script:
     </script>
 }
 ```
+
+## Bootbox Plug-in
+
+```
+PM> install-package bootbox -version:4.3.0
+```
+BundleConfig:
+```
+bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+				"~/Scripts/bootstrap.js",
+				"~/Scripts/bootbox.js"));
+```
+View (bootbox.confirm):
+```
+bootbox.confirm("Are you sure you want to delete this customer ?", function (result) {
+    if (result) {
+        $.ajax({
+            url: "/api/customers/" + button.attr("data-customer-id"),
+            method: "DELETE",
+            success: function () {
+                button.parents("tr").remove();
+            }
+        });
+    }
+});
+```
