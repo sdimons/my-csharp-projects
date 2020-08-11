@@ -407,6 +407,7 @@
     <Content Include="Pdf\7_jQuery.pdf.pdf" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Pdf\7_Client-side Development Cheat Sheet.pdf.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Readme\5_Readme_Validation.md" />
     <None Include="Readme\6_Readme_WebApi.md" />
