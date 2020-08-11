@@ -299,6 +299,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Readme\5_Readme_Validation.md" />
     <None Include="Readme\6_Readme_WebApi.md" />
+    <None Include="Readme\7_Client-side Development.md" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
