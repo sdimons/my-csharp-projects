@@ -144,3 +144,9 @@ Controller (CustomersController):
 
 ## Returning Hierarchical Data
 
+## DataTables Removing Records
+
+```
+table.row(button.parents("tr")).remove().draw();
+```
+
