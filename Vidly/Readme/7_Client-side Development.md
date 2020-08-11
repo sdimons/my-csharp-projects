@@ -94,3 +94,50 @@ View (index):
 ```
 $("#customers").DataTable();
 ```
+
+## DataTables with Ajax Source
+View (script):
+```
+            $("#customers").DataTable({
+                ajax: {
+                    url: "/api/customers",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, customer) {
+                            return "<a href='/cusromers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+```
+View:
+```
+<table id="customers" class="table table-bordered table-­hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+</table>
+```
+Controller (CustomersController):
+```
+        public ActionResult Index()
+        {
+           return View();
+        }
+```
