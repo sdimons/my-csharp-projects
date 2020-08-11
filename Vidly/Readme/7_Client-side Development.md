@@ -58,3 +58,10 @@ bootbox.confirm("Are you sure you want to delete this customer ?", function (res
     }
 });
 ```
+
+## Optimizing jQuery Code
+```
+$("#customers").on("click", ".js-delete", function () {
+...
+}
+```
