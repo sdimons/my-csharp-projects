@@ -296,6 +296,7 @@
     <Content Include="Pdf\5_Implementing Validation Cheat Sheet.pdf.pdf" />
     <Content Include="Pdf\6_Building Web APIs Cheat Sheet.pdf.pdf" />
     <Content Include="Pdf\6_Resolving exception for updating Id.pdf.pdf" />
+    <Content Include="Pdf\7_jQuery.pdf.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Readme\5_Readme_Validation.md" />
     <None Include="Readme\6_Readme_WebApi.md" />
