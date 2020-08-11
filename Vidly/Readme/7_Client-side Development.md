@@ -65,3 +65,32 @@ $("#customers").on("click", ".js-delete", function () {
 ...
 }
 ```
+
+## DataTables Plug-in
+```
+PM> install-package jquery.datatables -version:1.10.11
+```
+BundleConfig (js):
+```
+bundles.Add(new ScriptBundle("~/bundles/lib").Include(
+            "~/Scripts/jquery-{version}.js",
+            "~/Scripts/bootstrap.js",
+            "~/Scripts/bootbox.js",
+            "~/Scripts/DataTables/jquery.dataTables.js",
+            "~/Scripts/DataTables/datatables.bootstrap.js"));
+```
+BundleConfig (css):
+```
+bundles.Add(new StyleBundle("~/Content/css").Include(
+          "~/Content/bootstrap-lumen.css",
+          "~/Content/datatables/css/datatables.bootstrap.css",
+          "~/Content/site.css"));
+```
+View (_Layout):
+```
+@Scripts.Render("~/bundles/lib")
+```
+View (index):
+```
+$("#customers").DataTable();
+```
