@@ -59,3 +59,26 @@ INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'33c54877-f60b
 ```
 PM> update-database
 ```
+
+##  Working with Roles
+Model:
+```
+    public static class RoleName
+    {
+        public const string CanManageMovies = "CanManageMovies";
+    }
+```
+Controller (Index):
+```
+public ActionResult Index()
+        {
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
+        }
+```
+Controller (New):
+```
+[Authorize(Roles = RoleName.CanManageMovies)]
+public ActionResult New()
+```
