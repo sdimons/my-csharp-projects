@@ -85,4 +85,34 @@ public ActionResult New()
 
 ## Adding Profile Data
 
+## OAuth
+1. Enable SSL (for secure communication)
+2. Register out app with Facebook
+
+## Social Logins
+Enable SSL:
+1. Vidly -> Project Property -> SSL Enabled
+2. Vidly -> Properties -> Web -> Project Urls: https://localhost:44309/
+3. FilterConfig:
+```
+filters.Add(new RequireHttpsAttribute());
+```
+Register out app with Facebook:
+https://developers.facebook.com/
+1. Register
+2. Add a new App
+3. Select WebSite
+4. Type the application name
+5. Create New Facebook App ID
+6. Type your contact email
+7. Type your aplication url (https://localhost:44309/)
+8. Click link "Skip to Developer Dashboard"
+9. Get App ID and App Secret
+
+Startup.Auth (use App ID and App Secret from developers.facebook.com):
+```
+app.UseFacebookAuthentication(
+	appId: "1234567890",
+	appSecret: "123445");
+```
 
