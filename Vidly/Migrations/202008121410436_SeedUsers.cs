@@ -1,40 +1,8 @@
-﻿## Restricting Access
-For action:
-```
-[Authorize]
-public ActionResult Index()
-{...}
-```
-For controller:
-```
-[Authorize]
-public class CustomersController : Controller
-```
-Globally (FilterConfig):
-```
-filters.Add(new AuthorizeAttribute());
-```
-To allow anonymous:
-```
-[AllowAnonymous]
-public class HomeController : Controller
-```
-
-## Seeding Users and Roles
-AccountController (Register(RegisterViewModel model)):
-```
-//temp code
-var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
-var roleManager = new RoleManager<IdentityRole>(roleStore);
-await roleManager.CreateAsync(new IdentityRole("CanManageMovies"));
-await UserManager.AddToRoleAsync(user.Id, "CanManageMovies");
-```
-
-```
-PM> add-migration SeedUsers
-```
-
-```
+namespace Vidly.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
     public partial class SeedUsers : DbMigration
     {
         public override void Up()
@@ -54,8 +22,4 @@ INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'33c54877-f60b
         {
         }
     }
-```
-
-```
-PM> update-database
-```
+}
