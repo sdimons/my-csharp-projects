@@ -82,3 +82,7 @@ Controller (New):
 [Authorize(Roles = RoleName.CanManageMovies)]
 public ActionResult New()
 ```
+
+## Adding Profile Data
+
+
