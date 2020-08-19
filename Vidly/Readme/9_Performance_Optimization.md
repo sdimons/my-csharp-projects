@@ -26,7 +26,9 @@ https://localhost:44309/Movies
 ```
 6. Ajax -> Inspect -> SQL
 
-### Output Cache
+### Application Tier
+
+#### Output Cache
 ```
 [OutputCache(Duration = 50)]
 public ActionResult Index()
@@ -59,7 +61,7 @@ public ActionResult Index()
 }
 ```
 
-## Data Cache
+#### Data Cache
 CustomersController:
 ```
 public ActionResult Index()
@@ -73,12 +75,12 @@ public ActionResult Index()
 }
 ```
 
-## Async
+#### Async
 Async improves scalability (not performance)!!!
 
-## Release Builds
+#### Release Builds
 
-## Disabling Session
+#### Disabling Session
 Session kill scalability
 You shoud make your application stateless.
 Web.config:
@@ -88,3 +90,6 @@ Web.config:
     ...
 </system.web>
 ```
+
+## Client Tier
+
