@@ -1,6 +1,11 @@
 ﻿## Performance Optimization
+1. Data Tier (Glimpse)
+2. Application Tier (Output Cache, Data Cache, Release Builds)
+3. Client Tier
+
 
 ### Data Tier
+
 #### Glimpse
 1.
 ```
@@ -70,3 +75,6 @@ public ActionResult Index()
 
 ## Async
 Async improves scalability (not performance)!!!
+
+## Release Builds
+
