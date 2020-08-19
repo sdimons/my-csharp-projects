@@ -78,3 +78,13 @@ Async improves scalability (not performance)!!!
 
 ## Release Builds
 
+## Disabling Session
+Session kill scalability
+You shoud make your application stateless.
+Web.config:
+```
+<system.web>
+    <sessionState mode="Off"></sessionState>
+    ...
+</system.web>
+```
