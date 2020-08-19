@@ -67,3 +67,6 @@ public ActionResult Index()
     return View();
 }
 ```
+
+## Async
+Async improves scalability (not performance)!!!
