@@ -445,6 +445,7 @@
     <Content Include="Pdf\8_Authentication and Authorization Cheat Sheet.pdf.pdf" />
     <Content Include="Pdf\8_Additional Reading.pdf.pdf" />
     <Content Include="Pdf\8_Authentication and Authorization Exercise.pdf.pdf" />
+    <Content Include="Pdf\9_Data Caching.pdf.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Readme\5_Readme_Validation.md" />
     <None Include="Readme\6_Readme_WebApi.md" />
