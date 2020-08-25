@@ -428,6 +428,7 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -440,6 +441,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Readme\10_Readme_Features.md" />
     <Content Include="Readme\2_Readme_Fundamentals.md" />
     <Content Include="Pdf\2_ASP.NET MVC Fundamentals Cheat Sheet.pdf" />
     <Content Include="Pdf\2_ASP.NET MVC Fundamentals - Exercise Hints.pdf" />
@@ -459,12 +461,15 @@
     <Content Include="Pdf\8_Authentication and Authorization Exercise.pdf.pdf" />
     <Content Include="Pdf\9_Data Caching.pdf.pdf" />
     <Content Include="Pdf\9_Performance Optimization Cheat Sheet.pdf.pdf" />
+    <Content Include="Pdf\10_AJAX.pdf.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Readme\5_Readme_Validation.md" />
     <None Include="Readme\6_Readme_WebApi.md" />
     <None Include="Readme\7_Client-side Development.md" />
     <None Include="Readme\8_ Authentication and Authorization.md" />
     <None Include="Readme\9_Performance_Optimization.md" />
+    <Content Include="Scripts\bloodhound.js" />
+    <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -543,6 +548,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
