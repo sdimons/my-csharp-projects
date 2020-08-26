@@ -14,3 +14,8 @@ bundles.Add(new StyleBundle("~/Content/css").Include(
 	"~/Content/typeahead.css",
 	...
 ```
+
+#### Displaying Toast Notifications
+```
+PM> install-package toastr
+```
