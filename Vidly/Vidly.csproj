@@ -19,9 +19,9 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44309</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -446,6 +446,7 @@
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <None Include="Readme\10_Readme_Features.md" />
+    <None Include="Readme\11_Deployment.md" />
     <Content Include="Readme\2_Readme_Fundamentals.md" />
     <Content Include="Pdf\2_ASP.NET MVC Fundamentals Cheat Sheet.pdf" />
     <Content Include="Pdf\2_ASP.NET MVC Fundamentals - Exercise Hints.pdf" />
