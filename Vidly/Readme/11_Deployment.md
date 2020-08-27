@@ -48,3 +48,32 @@ Web.Testing.config:
 ```
 To show changes:
 Web.Testing.config -> right mouse click -> Preview Transform
+
+#### Securing Configuration Settings
+1. Create AppSettings.config and ConnectionStrings.config
+2. Move "appSettings" with content to AppSettings.config
+3. Move "connectionStrings" with content to ConnectionStrings.config
+4. Web.config:
+```
+<connectionStrings configSource="ConnectionStrings.config"></connectionStrings>
+<appSettings configSource="AppSettings.config"></appSettings>
+```
+5. Encript AppSettings.config and ConnectionStrings.config (workflow):
+	- Publish your asp.net mvc application ("c:\deploy")
+	- Visual Studio Tools -> Command Prompt for VS2017 (Run as Administrator)
+	- 
+	```
+	c:\Windows\system32>aspnet_regiis -pef "appSettings" "c:\deploy" 
+	-prov "DataProtectionConfigurationProvider"
+	```
+	```
+	c:\Windows\system32>aspnet_regiis -pef "connectionStrings" "c:\deploy" 
+	-prov "DataProtectionConfigurationProvider"
+	```
+
+6. Decript:
+There are the same steps except the last step:
+```
+c:\Windows\system32>aspnet_regiis -pdf "appSettings" "c:\deploy"
+```
+

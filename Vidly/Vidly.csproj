@@ -445,6 +445,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="AppSettings.config" />
+    <Content Include="ConnectionStrings.config" />
     <None Include="Readme\10_Readme_Features.md" />
     <None Include="Readme\11_Deployment.md" />
     <Content Include="Readme\2_Readme_Fundamentals.md" />
