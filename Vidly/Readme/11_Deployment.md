@@ -71,9 +71,39 @@ Web.Testing.config -> right mouse click -> Preview Transform
 	-prov "DataProtectionConfigurationProvider"
 	```
 
-6. Decript:
-There are the same steps except the last step:
+6. Decript (There are the same steps except the last step):
 ```
 c:\Windows\system32>aspnet_regiis -pdf "appSettings" "c:\deploy"
+```
+
+#### Custom Error Pages
+1. For errors in actions:
+Web.config (system.web):
+```
+<customErrors mode="On"></customErrors>
+```
+```
+<customErrors mode="RemoteOnly"></customErrors>
+```
+
+It's comminf from "Views/Shared/Error.cshtml" and FilterConfig:
+```
+filters.Add(new HandleErrorAttribute());
+```
+
+2. For 404:  
+- Web.config (system.web) if an action doesn't exist :
+```
+<customErrors mode="On">
+  <error statusCode="404" redirect="~/404.html" />
+</customErrors>
+```
+
+- Web.config (system.webServer) if a static file doesn't exists:
+```
+<httpErrors errorMode="Custom">
+  <remove statusCode="404" />
+  <error statusCode="404" path="404.html" responseMode="File" />
+</httpErrors>
 ```
 
