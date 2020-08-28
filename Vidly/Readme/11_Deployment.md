@@ -107,3 +107,24 @@ filters.Add(new HandleErrorAttribute());
 </httpErrors>
 ```
 
+#### Logging Unhandled Exceptions
+```
+PM> install-package Elmah
+```
+Web.config (system.web):
+```
+customErrors mode="RemoteOnly"
+```
+To see log go to the endpoint:
+https://localhost:44309/elmah.axd
+
+For only admin "admin@vidly.com" (location path="elmah.axd" -> system.web):
+```
+<authorization>
+    <allow users="admin@vidly.com" />
+    <deny users="*" />
+</authorization>
+```
+
+
+
