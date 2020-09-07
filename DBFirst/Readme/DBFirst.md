@@ -73,5 +73,30 @@ Right mouse click on empty area of EDMX Designer -> Validate
 Tinyint is compatible with smallint so you have to do nothing. But tinyint is non-compatible with varchar so you have to modify data type manually.
 
 3. Deleting a table
-Right mouse click on empty area of EDMX Designer -> Update Model from Database -> Delete tab (automaticly) -> Finish
+Right mouse click on empty area of EDMX Designer -> Update Model from Database -> Delete tab (automaticly) -> Finish  
 BUT EF doesn't delete table from model so you have to delete the table manually from EDMX designer
+
+#### Importing Stored Procedures
+Right mouse click on empty area of EDMX Designer -> Update Model from Database -> Tick Stored Procedures and Functions
+
+To use Stored Procedures and Functions:
+```
+var dbContext = new PlutoDBContext();
+var courses = dbContext.GetCourses();
+foreach (var c in courses)
+    Console.WriteLine(c.Title);
+```
+
+#### Function Imports
+Model Browser -> Function Imports
+
+When to use Complex Types?
+1. Result = Table 1 + Table 2
+2. Result = Part of large table
+
+How to create new complex type?
+1. Model Browser -> Function Imports -> Choose the Function -> Double left mouse click on it
+2. Check Complex
+3. Click Get Column Information
+4. Create New Complex Type
+5. Change the Complex Type Name if you need
