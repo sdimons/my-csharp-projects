@@ -52,3 +52,26 @@ App.config or Web.config:
 - data source - server
 - initial catalog - database name
 - integrated security - windows or sql server autorization
+
+#### Dealing with Database Changes
+We always start with a database so we make changes in the database and then we refresh our model.
+1. Adding a new table (UserProfiles):
+Right mouse click on empty area of EDMX Designer -> Update Model from Database -> Tick the new table (New tab) -> Finish
+
+2. Updating a table:
+- adding column (Name to UserProfiles)
+- modify column (Price To FullPrice, tinyint to smallint/varchar)
+- delete column (LevelString from Courses)
+
+Right mouse click on empty area of EDMX Designer -> Update Model from Database -> Refresh tab (our model will be refresh automaticly) -> Finish
+
+**To validate mapping:**  
+Right mouse click on empty area of EDMX Designer -> Validate
+
+<font color='red'>**Column modifying and deleting don't work correctly so you have to delete Price and LevelString manually!!!**</font>
+
+Tinyint is compatible with smallint so you have to do nothing. But tinyint is non-compatible with varchar so you have to modify data type manually.
+
+3. Deleting a table
+Right mouse click on empty area of EDMX Designer -> Update Model from Database -> Delete tab (automaticly) -> Finish
+BUT EF doesn't delete table from model so you have to delete the table manually from EDMX designer
