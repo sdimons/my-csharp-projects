@@ -1,18 +1,37 @@
 ﻿## Building a Model using Database-First Workflow
 
-Create Model (PlutoModel):  
+#### A Quick Tour of EDMX Designer
+**Create Model (PlutoModel):**  
 1. Project DBFirst -> right mouse click -> Add -> New Item -> ADO.NET Entity Data Model  
 2. Save connection settings in App.Congig as: PlutoDbContext
 3. Tick Tables
 4. EF Designer from Database (Tick "Pluralize or singularize..." on "Choose your Database Object and Settings" tab)
 
-EDMX Designer:
+**EDMX Designer:**
 - zooming (ctrl + mouse wheel)
 - layout diagram (right mouse click on empty area of diagramm -> Diagram -> Layout Diagram)
 - export as image (right mouse click on empty area of diagramm -> Diagram -> Export as Image)
 - collapse/expand (right mouse click on empty area of diagramm -> Diagram -> Collapse All/Expand All)
 - display data type (right mouse click on empty area of diagramm -> Scalar Property Format -> Display Name and Type)
-- 
 
 
+#### Uncovering the EDMX
+**EDMX as XML:**  
+Solution Explorer -> right mouse click the edmx file -> Open With... -> XML (Text) Editor  
 
+**Content EDMX file:**
+1. EF Runtime content
+- Storage Model (representation of our Database; knows everythng about our database schema)
+- Conceptual Model (representation of our Entities)
+- Mapping (mapping between storage model and conceptual model)
+2. EF Designer content : visual representation (zooming, moving etc.)
+
+**How to see Mapping in a visual way:**  
+Right mouse click on an entity (in EDMX Designer) -> Table Mapping
+
+**To ignore property:**  
+Right mouse click on an entity (in EDMX Designer) -> Table Mapping -> Column Mappings -> Choose the column -> Value/Property to 
+"Delete"
+
+**How to see Storage Model in a visual way:**  
+Right mouse click on empty area of EDMX Designer -> Model Browser (see the section PlutoModel.Store)
