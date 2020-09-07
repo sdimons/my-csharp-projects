@@ -35,3 +35,20 @@ Right mouse click on an entity (in EDMX Designer) -> Table Mapping -> Column Map
 
 **How to see Storage Model in a visual way:**  
 Right mouse click on empty area of EDMX Designer -> Model Browser (see the section PlutoModel.Store)
+
+#### Connection Strings
+App.config or Web.config:
+```
+<connectionStrings>
+    <add name="PlutoDBContext" connectionString="metadata=res://*/PlutoModel.csdl|res://*/PlutoModel.ssdl|res://*/PlutoModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\;initial catalog=Pluto;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+</connectionStrings>
+```
+**metadata:**
+- res://*/PlutoModel.csdl - conceptual model
+- res://*/PlutoModel.ssdl - storage model
+- res://*/PlutoModel.msl - mapping
+
+**connection string:**
+- data source - server
+- initial catalog - database name
+- integrated security - windows or sql server autorization
