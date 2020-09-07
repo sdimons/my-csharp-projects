@@ -100,3 +100,25 @@ How to create new complex type?
 3. Click Get Column Information
 4. Create New Complex Type
 5. Change the Complex Type Name if you need
+
+#### Working with Enums
+There are two ways to add Enum to Entity Data Model:
+1. Create new enum:
+- Model Browser -> Enum Types -> Add New Enum Type...
+- Specify members
+- Course -> Level -> Type to CourseLevel
+- In program: ```course.Level = CourseLevel.Beginner;```
+2. Use an existing enum:
+```
+public enum Level : byte
+{
+    Beginner = 1,
+    Intermediate = 2,
+    Advanced = 3
+}
+```
+- Model Browser -> Enum Types -> Add New Enum Type...
+- The name is the same name of the existing enum ```public enum Level : byte```
+- We're not going to specify any members
+- Tick Reference external type
+- Type Reference Name
