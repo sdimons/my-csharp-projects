@@ -53,6 +53,11 @@
   <ItemGroup>
     <Compile Include="Author.cs" />
     <Compile Include="Cours.cs" />
+    <Compile Include="Migrations\202009132129272_InitialModel.cs" />
+    <Compile Include="Migrations\202009132129272_InitialModel.Designer.cs">
+      <DependentUpon>202009132129272_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,8 +66,13 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Readme\CodeFirstExistingDatabase.md" />
+    <None Include="Readme\1_CodeFirstExistingDatabase.md" />
+    <None Include="Readme\2_EnablingMigrations.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009132129272_InitialModel.resx">
+      <DependentUpon>202009132129272_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
