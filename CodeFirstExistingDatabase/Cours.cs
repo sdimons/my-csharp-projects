@@ -21,6 +21,8 @@ namespace CodeFirstExistingDatabase
 
         public string Description { get; set; }
 
+        public Category Categories { get; set; }
+
         public int Level { get; set; }
 
         public float FullPrice { get; set; }
