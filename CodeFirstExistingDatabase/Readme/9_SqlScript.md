@@ -2,7 +2,7 @@
 
 Run the following command to get a SQL script of all your migrations:
 ```
-PM> Update-‐Database ­‐Script ­‐SourceMigration:0
+PM> Update-Database ­‐Script ­‐SourceMigration:0
 ```
 You may want to change the range of migrations included in the SQL script:
 ```
