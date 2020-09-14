@@ -127,5 +127,14 @@
       <DependentUpon>202009141508419_DeleteCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme\7_DowngradingDatabase.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Readme\Images\TargetMigration_1.jpg" />
+    <Content Include="Readme\Images\TargetMigration_2.jpg" />
+    <Content Include="Readme\Images\TargetMigration_3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
