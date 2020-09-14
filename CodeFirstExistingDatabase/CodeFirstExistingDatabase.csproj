@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Readme\9_SqlScript.md" />
     <Content Include="Readme\Images\TargetMigration_1.jpg" />
     <Content Include="Readme\Images\TargetMigration_2.jpg" />
     <Content Include="Readme\Images\TargetMigration_3.jpg" />
