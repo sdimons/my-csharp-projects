@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classification.cs" />
+    <Compile Include="EntityConfigurations\GenreConfiguration.cs" />
+    <Compile Include="EntityConfigurations\TagConfiguration.cs" />
+    <Compile Include="EntityConfigurations\VideoConfiguration.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Migrations\202009142140543_InitialModel.cs" />
     <Compile Include="Migrations\202009142140543_InitialModel.Designer.cs">
@@ -63,16 +66,26 @@
     <Compile Include="Migrations\202009142148518_AddClassificationColumnToVideosTable.Designer.cs">
       <DependentUpon>202009142148518_AddClassificationColumnToVideosTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009211454011_EnhanceVideosTableAndGenresTable.cs" />
+    <Compile Include="Migrations\202009211454011_EnhanceVideosTableAndGenresTable.Designer.cs">
+      <DependentUpon>202009211454011_EnhanceVideosTableAndGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009211507176_AddVideoTagsTable.cs" />
+    <Compile Include="Migrations\202009211507176_AddVideoTagsTable.Designer.cs">
+      <DependentUpon>202009211507176_AddVideoTagsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs" />
     <Compile Include="Video.cs" />
     <Compile Include="VidzyContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Pdf\11. Exercises.pdf" />
+    <None Include="Pdf\2_Exercises.pdf" />
+    <None Include="Pdf\1_Exercises.pdf" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202009142140543_InitialModel.resx">
@@ -83,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009142148518_AddClassificationColumnToVideosTable.resx">
       <DependentUpon>202009142148518_AddClassificationColumnToVideosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009211454011_EnhanceVideosTableAndGenresTable.resx">
+      <DependentUpon>202009211454011_EnhanceVideosTableAndGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009211507176_AddVideoTagsTable.resx">
+      <DependentUpon>202009211507176_AddVideoTagsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
