@@ -89,6 +89,7 @@
     <Compile Include="VidzyContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="9. Exercises.pdf" />
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
