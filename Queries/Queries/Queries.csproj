@@ -67,6 +67,7 @@
     <None Include="packages.config" />
     <None Include="Pdf\10.1 LINQ Cheat Sheet Extension Methods.pdf" />
     <None Include="Pdf\10.2 LINQ Cheat Sheet.pdf" />
+    <None Include="Readme\Querying_Data_using_LINQ.md" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201510010029257_InitialMigration.resx">
