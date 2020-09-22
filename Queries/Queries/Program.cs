@@ -8,22 +8,9 @@ namespace Queries
         {
             var context = new PlutoContext();
 
-            // LINQ Syntax
-            var quiery =
-                from c in context.Courses
-                where c.Name.Contains("C#")
-                orderby c.Name
-                select c;
-            //foreach(var course in quiery)
-            //{
-            //    Console.WriteLine(course.Name);
-            //}
-
-            // Extension methods
-            var courses = context.Courses
-                .Where(c => c.Name.Contains("C#"))
-                .OrderBy(c => c.Name);
-            foreach (var course in quiery)
+            IQueryable<Course> courses = context.Courses;
+            var filtred = courses.Where(c => c.Level == 1);
+            foreach(var course in filtred)
             {
                 Console.WriteLine(course.Name);
             }

@@ -68,12 +68,16 @@
     <None Include="Pdf\10.1 LINQ Cheat Sheet Extension Methods.pdf" />
     <None Include="Pdf\10.2 LINQ Cheat Sheet.pdf" />
     <None Include="Readme\Deferred_Execution.md" />
+    <None Include="Readme\IQueryableExplained.md" />
     <None Include="Readme\Querying_Data_using_LINQ.md" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201510010029257_InitialMigration.resx">
       <DependentUpon>201510010029257_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme\Images\IQueryable_1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
