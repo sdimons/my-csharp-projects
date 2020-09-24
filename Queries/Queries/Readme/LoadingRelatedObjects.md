@@ -35,6 +35,17 @@ public PlutoContext()
 }
 ```
 
+#### N + 1 Problem
+To get N entities and their related entities, we'll end up with N + 1 queries.
+```
+foreach(var course in courses)
+{
+    Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
+}
+```
+For each course EF is going to run a separate query to get the author for this couse. BUT EF only runs a query
+if there is no object by that ID in its case which is at that context!!!
+
 2. Eager Loading
 
 3. Explicit Loading

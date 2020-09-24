@@ -8,10 +8,10 @@ namespace Queries
         {
             var context = new PlutoContext();
 
-            var course = context.Courses.Single(c => c.Id == 2);
-            foreach(var tag in course.Tags)
+            var courses = context.Courses.ToList();
+            foreach(var course in courses)
             {
-                Console.WriteLine(tag.Name);
+                Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
             }
         }
     }
