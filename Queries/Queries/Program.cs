@@ -8,11 +8,10 @@ namespace Queries
         {
             var context = new PlutoContext();
 
-            IQueryable<Course> courses = context.Courses;
-            var filtred = courses.Where(c => c.Level == 1);
-            foreach(var course in filtred)
+            var course = context.Courses.Single(c => c.Id == 2);
+            foreach(var tag in course.Tags)
             {
-                Console.WriteLine(course.Name);
+                Console.WriteLine(tag.Name);
             }
         }
     }
