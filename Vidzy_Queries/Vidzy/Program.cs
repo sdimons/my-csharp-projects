@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Vidzy
@@ -8,6 +9,7 @@ namespace Vidzy
     {
         static void Main(string[] args)
         {
+            // 6. Querying Data using LINQ
             var context = new VidzyContext();
 
             // Action movies sorted by name
@@ -76,10 +78,10 @@ namespace Vidzy
 
             // Genres and number of videos in them
             var genres = context.Genres
-                .GroupJoin(context.Videos, g => g.Id, v => v.GenreId, (genre, videos) => new
+                .GroupJoin(context.Videos, g => g.Id, v => v.GenreId, (genre, myVideos) => new
                 {
                     Name = genre.Name,
-                    VideosCount = videos.Count()
+                    VideosCount = myVideos.Count()
                 })
                 .OrderByDescending(g => g.VideosCount);
 
@@ -88,7 +90,37 @@ namespace Vidzy
             foreach (var g in genres)
                 Console.WriteLine("{0} ({1})", g.Name, g.VideosCount);
 
+            // 7. Loading Related Objects
+            // To enable lazy loading, you need to declare navigation properties
+            // as virtual. Look at the Video class.
 
+            var videos = context.Videos.ToList();
+
+            Console.WriteLine();
+            Console.WriteLine("LAZY LOADING");
+            foreach (var v in videos)
+                Console.WriteLine("{0} ({1})", v.Name, v.Genre.Name);
+
+            // Eager loading
+            var videosWithGenres = context.Videos.Include(v => v.Genre).ToList();
+
+            Console.WriteLine();
+            Console.WriteLine("EAGER LOADING");
+            foreach (var v in videosWithGenres)
+                Console.WriteLine("{0} ({1})", v.Name, v.Genre.Name);
+
+            // Explicit loading
+
+            // NOTE: At this point, genres are already loaded into the context,
+            // so the following line is not going to make a difference. If you 
+            // want to see expicit loading in action, comment out the eager loading 
+            // part as well as the foreach block in the lazy loading.
+            context.Genres.Load();
+
+            Console.WriteLine();
+            Console.WriteLine("EXPLICIT LOADING");
+            foreach (var v in videos)
+                Console.WriteLine("{0} ({1})", v.Name, v.Genre.Name);
         }
     }
 }
