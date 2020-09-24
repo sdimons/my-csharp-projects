@@ -47,7 +47,7 @@ For each course EF is going to run a separate query to get the author for this c
 if there is no object by that ID in its case which is at that context!!!
 
 2. **Eager Loading**  
-It's the opposite of lazy loading
+It's the opposite of lazy loading. It uses JOINs and has one round-trip.
 a) Include("Author") - Avoid it!!!!
 ```
 var courses = context.Courses.Include("Author").ToList();
@@ -67,3 +67,27 @@ var courses = context.Courses.Include(c => c.Author).ToList();
 ![Picture 7](Images/ManyIncludes_1.jpg)
 
 3. **Explicit Loading**
+It uses separte queries and has multiple round-trips.
+MSDN way:
+```
+context.Entry(author).Collection(a => a.Courses).Load();
+```
+It's only for a single object (Entry(author))
+
+Mosh way - the best way:
+```
+context.Courses.Where(c => c.AuthorId == author.Id).Load();
+```
+
+With explicit loading (MSDN way) we can aplly filter (it's too noise approach):
+```
+context.Entry(author).Collection(a => a.Courses).Query().Where(c => c.FullPrice == 0).Load();
+```
+
+#### IN Operator for Linq
+![Picture 8](Images/InOperator_1.jpg)
+```
+var authors = context.Authors.ToList();
+var authorIds = authors.Select(a => a.Id);
+context.Courses.Where(c => authorIds.Contains(c.AuthorId) && c.FullPrice == 0).Load();
+```
