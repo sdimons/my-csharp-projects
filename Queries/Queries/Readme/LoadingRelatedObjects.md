@@ -1,6 +1,6 @@
 ﻿##  Loading Related Objects
 
-1. Lazy loading
+1. **Lazy loading**
 ```
 var course = context.Courses.Single(c => c.Id == 2);
 foreach(var tag in course.Tags)
@@ -46,6 +46,24 @@ foreach(var course in courses)
 For each course EF is going to run a separate query to get the author for this couse. BUT EF only runs a query
 if there is no object by that ID in its case which is at that context!!!
 
-2. Eager Loading
+2. **Eager Loading**  
+It's the opposite of lazy loading
+a) Include("Author") - Avoid it!!!!
+```
+var courses = context.Courses.Include("Author").ToList();
+``` 
 
-3. Explicit Loading
+b) Include(c => c.Author)
+```
+var courses = context.Courses.Include(c => c.Author).ToList();
+```
+
+#### Multiplle Levels
+![Picture 4](Images/Multiple_Levels_1.jpg)
+![Picture 5](Images/Multiple_Levels_2.jpg)
+![Picture 6](Images/Multiple_Levels_3.jpg)
+
+(-)Too many includes:
+![Picture 7](Images/ManyIncludes_1.jpg)
+
+3. **Explicit Loading**

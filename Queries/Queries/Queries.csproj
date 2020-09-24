@@ -82,6 +82,10 @@
     <Content Include="Readme\Images\CourseProxy_2.jpg" />
     <Content Include="Readme\Images\CourseProxy_3.jpg" />
     <Content Include="Readme\Images\IQueryable_1.jpg" />
+    <Content Include="Readme\Images\ManyIncludes_1.jpg" />
+    <Content Include="Readme\Images\Multiple_Levels_1.jpg" />
+    <Content Include="Readme\Images\Multiple_Levels_2.jpg" />
+    <Content Include="Readme\Images\Multiple_Levels_3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
