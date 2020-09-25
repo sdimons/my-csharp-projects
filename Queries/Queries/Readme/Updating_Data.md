@@ -15,3 +15,12 @@ course.Author = context.Authors.Single(a => a.Id == 1);
 ```
 course.AuthorId = 1;
 ```
+
+#### Updating objects
+```
+var course = context.Courses.Find(4); //Single(c => c.Id == 4)
+course.Name = "New Name";
+course.AuthorId = 2;
+
+context.SaveChanges();
+```
