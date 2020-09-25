@@ -24,3 +24,25 @@ course.AuthorId = 2;
 
 context.SaveChanges();
 ```
+
+#### Removing objects
+
+1. With Cascade Delete
+```
+var course = context.Courses.Find(6);
+context.Courses.Remove(course);
+context.SaveChanges();
+```
+2. Without Cascade Delete
+```
+var author = context.Authors.Include(a => a.Courses).Single(a => a.Id == 2);
+context.Courses.RemoveRange(author.Courses);
+context.Authors.Remove(author);
+context.SaveChanges();
+```
+
+#### Best Practices
+**Prefer logical deletes to physical deletes:**  
+```
+authorIsDeleted = true;
+```
