@@ -71,6 +71,7 @@
     <None Include="Readme\IQueryableExplained.md" />
     <None Include="Readme\LoadingRelatedObjects.md" />
     <None Include="Readme\Querying_Data_using_LINQ.md" />
+    <None Include="Readme\Updating_Data.md" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201510010029257_InitialMigration.resx">

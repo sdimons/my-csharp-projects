@@ -9,23 +9,32 @@ namespace Queries
         {
             var context = new PlutoContext();
 
+            // WPF
+            var authors = context.Authors.ToList();
             var author = context.Authors.Single(a => a.Id == 1);
 
-            // MSDN way
-            context.Entry(author).Collection(a => a.Courses).Query().Where(c => c.FullPrice == 0).Load();
-
-            // Mosh way
-            context.Courses.Where(c => c.AuthorId == author.Id).Load();
-
-            foreach(var course in author.Courses)
+            var course = new Course
             {
-                Console.WriteLine("{0}", course.Name);
-            }
+                Name = "New Course",
+                Description = "New Description",
+                FullPrice = 19.95f,
+                Level = 1,
+                Author = author
+            };
+            context.Courses.Add(course);
+            context.SaveChanges();
 
-            // IN Operator for Linq
-            var authors = context.Authors.ToList();
-            var authorIds = authors.Select(a => a.Id);
-            context.Courses.Where(c => authorIds.Contains(c.AuthorId) && c.FullPrice == 0).Load();
+            // Web applications
+            var course2 = new Course
+            {
+                Name = "New Course 2",
+                Description = "New Description 2",
+                FullPrice = 19.95f,
+                Level = 1,
+                AuthorId = 1
+            };
+            context.Courses.Add(course2);
+            context.SaveChanges();
         }
     }
 }
