@@ -9,18 +9,23 @@ namespace Queries
         {
             var context = new PlutoContext();
 
-            // With Cascade Delete
-            var course = context.Courses.Find(6);
-            context.Courses.Remove(course);
+            // Add an object 
+            context.Authors.Add(new Author { Name = "New Author" });
 
-            context.SaveChanges();
+            // Update an object
+            var author = context.Authors.Find(3);
+            author.Name = "Updated";
 
-            // Without Cascade Delete
-            var author = context.Authors.Include(a => a.Courses).Single(a => a.Id == 2);
-            context.Courses.RemoveRange(author.Courses);
-            context.Authors.Remove(author);
+            // Remove an object
+            var another = context.Authors.Find(4);
+            context.Authors.Remove(another);
 
-            context.SaveChanges();
+            var entries = context.ChangeTracker.Entries();
+            foreach(var entry in entries)
+            {
+                entry.Reload();
+                Console.WriteLine(entry.State);
+            }
         }
     }
 }

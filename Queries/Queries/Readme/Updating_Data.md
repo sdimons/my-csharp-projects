@@ -1,4 +1,5 @@
 ﻿## Updating Data
+![Picture 1](Images/DBContext_1.jpg)
 #### Adding objects
 ```
 var course = new Course {...}
@@ -46,3 +47,25 @@ context.SaveChanges();
 ```
 authorIsDeleted = true;
 ```
+
+#### Working with Change Tracker
+
+```
+var entries = context.ChangeTracker.Entries();
+foreach(var entry in entries)
+{
+    Console.WriteLine(entry.State);
+}
+```
+Also entry has:
+- CurrentValues
+- Entyty
+- OriginalValues (from DB)
+
+For entry.State == Added OriginalValues doesn't exist
+For entry.State == Deleted CurrentValues doesn't exist
+
+To get the value from CurrentValues: entry.CurrentValues["Name"]
+
+**entry.Reload()** - reload entry from the database
+
