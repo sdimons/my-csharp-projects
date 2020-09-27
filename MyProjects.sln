@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidzy_Queries", "Vidzy_Queries\Vidzy\Vidzy_Queries.csproj", "{2AEE16B3-AFD2-4C91-9751-E37310E4689C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidzy_UpdatingData", "Vidzy_UpdatingData\Vidzy\Vidzy_UpdatingData.csproj", "{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,6 +146,12 @@ Global
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957}.Testing|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +173,7 @@ Global
 		{E6AD0197-5683-4A94-8DD5-304F79046197} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
 		{D1776DED-C59A-4F8A-8C31-96EAE15BDF5A} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
 		{2AEE16B3-AFD2-4C91-9751-E37310E4689C} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
+		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
