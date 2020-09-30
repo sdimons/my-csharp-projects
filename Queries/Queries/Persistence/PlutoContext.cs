@@ -1,7 +1,8 @@
 using System.Data.Entity;
-using Queries.EntityConfigurations;
+using Queries.Core.Domain;
+using Queries.Persistence.EntityConfigurations;
 
-namespace Queries
+namespace Queries.Persistence
 {
     public class PlutoContext : DbContext
     {
