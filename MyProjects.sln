@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoWeb", "PlutoWeb\PlutoW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoDesktop", "PlutoDesktop\PlutoDesktop.csproj", "{F5FC621D-725A-495E-9236-409302454B6C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Troelsen", "Troelsen", "{7FFEB760-0540-47EE-A012-5BD48DB3ABBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineArgs", "CommandString\CommandLineArgs.csproj", "{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,6 +172,12 @@ Global
 		{F5FC621D-725A-495E-9236-409302454B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5FC621D-725A-495E-9236-409302454B6C}.Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{F5FC621D-725A-495E-9236-409302454B6C}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264}.Testing|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +202,7 @@ Global
 		{3E7B3CE1-971D-4953-B5BC-DAB3CC5B3957} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
 		{50765755-4217-4052-BC22-73F4557A32A6} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
 		{F5FC621D-725A-495E-9236-409302454B6C} = {C486DB05-8A3B-43D8-BBFF-D4AACEFCB396}
+		{759A87A4-9C4D-4DFC-B1EA-E7A863A0B264} = {7FFEB760-0540-47EE-A012-5BD48DB3ABBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
