@@ -53,13 +53,17 @@ namespace FunWithStrings
         static void EscapeChars()
         {
             Console.WriteLine("=> Escape characters:\a");
+            // Символ горизонтальной табуляции
             string strWithTabs = "Model\tColor\tSpeed\tPet Name\a ";
             Console.WriteLine(strWithTabs);
 
+            // Символ двойной кавычки
             Console.WriteLine("Everyone loves \"Hello World\"\a ");
+            // Символ обратной косой черты
+            // (полезно при определении путей к файлам и сетевым ресурсам)
             Console.WriteLine("C:\\MyApp\\bin\\Debug\a ");
 
-            // Adds a total of 4 blank lines (then beep again!).
+            // Добавить 4 пустых строки (затем звуковой сигнал!).
             Console.WriteLine("All finished.\n\n\n\a ");
             Console.WriteLine();
 
@@ -82,14 +86,16 @@ namespace FunWithStrings
         static void StringEquality()
         {
             Console.WriteLine("=> String equality:");
-            string s1 = "Hello!";
-            string s2 = "Yo!";
-            Console.WriteLine("s1 = {0}", s1);
-            Console.WriteLine("s2 = {0}", s2);
-            Console.WriteLine();
+            //string s1 = "Hello!";
+            //string s2 = "Yo!";
+            //Console.WriteLine("s1 = {0}", s1);
+            //Console.WriteLine("s2 = {0}", s2);
+            //Console.WriteLine();
+            //Console.WriteLine("s1 == s2: {0}", s1 == s2);
 
             // Test these strings for equality.
-            Console.WriteLine("s1 == s2: {0}", s1 == s2);
+            string s1 = "Hello!";
+            string s2 = "Yo!";
             Console.WriteLine("s1 == Hello!: {0}", s1 == "Hello!");
             Console.WriteLine("s1 == HELLO!: {0}", s1 == "HELLO!");
             Console.WriteLine("s1 == hello!: {0}", s1 == "hello!");
@@ -124,7 +130,10 @@ namespace FunWithStrings
         static void StringsAreImmutable()
         {
             //// Set initial string value.
-            //string s1 = "This is my string.";
+            string s1 = "This is my string.";
+            string upperString = s1.ToUpper();
+            Console.WriteLine("s1 = {0}", s1);
+
             //Console.WriteLine("s1 = {0}", s1);
 
             //// Uppercase s1?
@@ -146,7 +155,8 @@ namespace FunWithStrings
             Console.WriteLine("=> Using the StringBuilder:");
 
             // Make a StringBuilder with an initial size of 256.
-            StringBuilder sb = new StringBuilder("**** Fantastic Games ****", 256);
+            StringBuilder sb = 
+                new StringBuilder("**** Fantastic Games ****", 256);
 
             sb.Append("\n");
             sb.AppendLine("Half Life");
@@ -170,11 +180,14 @@ namespace FunWithStrings
             string name = "Soren";
 
             // Using curly bracket syntax.
-            string greeting = string.Format("\tHello {0} you are {1} years old.", name.ToUpper(), age);
+            string greeting = 
+                string.Format("\tHello {0} you are {1} years old.", 
+                name.ToUpper(), age);
             Console.WriteLine(greeting);
 
             // Using string interpolation
-            string greeting2 = $"\tHello {name.ToUpper()} you are {age} years old.";
+            string greeting2 = 
+                $"\tHello {name.ToUpper()} you are {age} years old.";
             Console.WriteLine(greeting2);
         }
         #endregion
