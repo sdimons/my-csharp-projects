@@ -9,17 +9,12 @@ namespace TypeConversions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("***** Fun with type conversions *****\n");
             short numb1 = 30000, numb2 = 30000;
 
-            // Explicitly cast the int into a short (and allow loss of data).
             short answer = (short)Add(numb1, numb2);
 
             Console.WriteLine("{0} + {1} = {2}",
                 numb1, numb2, answer);
-            NarrowingAttempt();
-            ProcessBytes();
-            Console.ReadLine();
         }
 
         static int Add(int x, int y)
