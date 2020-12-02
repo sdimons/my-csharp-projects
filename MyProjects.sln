@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConversions", "pro-csha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterationsAndDecisions", "pro-csharp-7-master\Chapter_3\IterationsAndDecisions\IterationsAndDecisions\IterationsAndDecisions.csproj", "{5D4CF817-4754-4349-A418-B26B532D0169}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "pro-csharp-7-master\Chapter_4\FunWithArrays\FunWithArrays\FunWithArrays.csproj", "{13011BAC-3111-447D-9CD9-E79F3058B082}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -210,6 +212,12 @@ Global
 		{5D4CF817-4754-4349-A418-B26B532D0169}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D4CF817-4754-4349-A418-B26B532D0169}.Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{5D4CF817-4754-4349-A418-B26B532D0169}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{13011BAC-3111-447D-9CD9-E79F3058B082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13011BAC-3111-447D-9CD9-E79F3058B082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13011BAC-3111-447D-9CD9-E79F3058B082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13011BAC-3111-447D-9CD9-E79F3058B082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13011BAC-3111-447D-9CD9-E79F3058B082}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{13011BAC-3111-447D-9CD9-E79F3058B082}.Testing|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,6 +247,7 @@ Global
 		{3F438738-B91E-4434-ABEE-887B3FE99D3E} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{4519714A-B883-443F-AFFC-C4B1120F80D2} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{5D4CF817-4754-4349-A418-B26B532D0169} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
+		{13011BAC-3111-447D-9CD9-E79F3058B082} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
