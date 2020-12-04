@@ -8,7 +8,7 @@ namespace FunWithEnums
     // This time, EmpType maps to an underlying byte.
     enum EmpType : byte
     {
-        Manager = 10,
+        Manager = 10,  
         Grunt = 1,
         Contractor = 100,
         VicePresident = 9
@@ -19,14 +19,13 @@ namespace FunWithEnums
         static void Main(string[] args)
         {
             Console.WriteLine("**** Fun with Enums *****\n");
-            EmpType e2 = EmpType.Contractor;
-
-            // These types are enums in the System namespace.
+            // Создать переменную типа EmpType
+            EmpType emp = EmpType.Contractor;
             DayOfWeek day = DayOfWeek.Monday;
-            ConsoleColor cc = ConsoleColor.Gray;
-
-            EvaluateEnum(e2);
+            EvaluateEnum(emp);
             EvaluateEnum(day);
+           
+            ConsoleColor cc = ConsoleColor.Gray;
             EvaluateEnum(cc);
             Console.ReadLine();
         }
@@ -56,11 +55,8 @@ namespace FunWithEnums
         #region Just a test.  Uncomment to verify.
         static void ThisMethodWillNotCompile()
         {
-            //// Error! SalesManager is not in the EmpType enum!
             //EmpType emp = EmpType.SalesManager;
-
-            //// Error! Forgot to scope Grunt value to EmpType enum!
-            //emp = Grunt;
+            //EmpType emp = Grunt;
         }
         #endregion
 
@@ -68,16 +64,19 @@ namespace FunWithEnums
         // This method will print out the details of any enum.
         static void EvaluateEnum(System.Enum e)
         {
-            Console.WriteLine("=> Information about {0}", e.GetType().Name);
+            Console.WriteLine("=> Information about {0}", 
+                e.GetType().Name);
 
             Console.WriteLine("Underlying storage type: {0}",
                 Enum.GetUnderlyingType(e.GetType()));
 
-            // Get all name/value pairs for incoming parameter.
+            // Получить все пары "имя-значение" для входного параметра.
             Array enumData = Enum.GetValues(e.GetType());
-            Console.WriteLine("This enum has {0} members.", enumData.Length);
+            Console.WriteLine("This enum has {0} members.", 
+                enumData.Length);
 
-            // Now show the string name and associated value.
+            // Вывести строковое имя и ассоциированное значение,
+            // использую флаг формата D
             for (int i = 0; i < enumData.Length; i++)
             {
                 Console.WriteLine("Name: {0}, Value: {0:D}",
