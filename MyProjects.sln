@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithArrays", "pro-csharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithMethods", "pro-csharp-7-master\Chapter_4\FunWithMethods\FunWithMethods\FunWithMethods.csproj", "{BFC82D44-373C-4689-9CE2-F69C1385AD31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverloading", "pro-csharp-7-master\Chapter_4\MethodOverloading\MethodOverloading\MethodOverloading.csproj", "{912DC969-D12F-428D-9450-DE70CEB078AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -226,6 +228,12 @@ Global
 		{BFC82D44-373C-4689-9CE2-F69C1385AD31}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFC82D44-373C-4689-9CE2-F69C1385AD31}.Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC82D44-373C-4689-9CE2-F69C1385AD31}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{912DC969-D12F-428D-9450-DE70CEB078AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912DC969-D12F-428D-9450-DE70CEB078AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912DC969-D12F-428D-9450-DE70CEB078AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912DC969-D12F-428D-9450-DE70CEB078AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912DC969-D12F-428D-9450-DE70CEB078AD}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{912DC969-D12F-428D-9450-DE70CEB078AD}.Testing|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -257,6 +265,7 @@ Global
 		{5D4CF817-4754-4349-A418-B26B532D0169} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{13011BAC-3111-447D-9CD9-E79F3058B082} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{BFC82D44-373C-4689-9CE2-F69C1385AD31} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
+		{912DC969-D12F-428D-9450-DE70CEB078AD} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
