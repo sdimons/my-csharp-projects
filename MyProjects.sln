@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStructures", "pro-cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueAndReferenceTypes", "pro-csharp-7-master\Chapter_4\ValueAndReferenceTypes\ValueAndReferenceTypes\ValueAndReferenceTypes.csproj", "{2FD8A625-0E38-42AD-9907-9207077D501A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefTypeValTypeParams", "pro-csharp-7-master\Chapter_4\RefTypeValTypeParams\RefTypeValTypeParams\RefTypeValTypeParams.csproj", "{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -258,6 +260,12 @@ Global
 		{2FD8A625-0E38-42AD-9907-9207077D501A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FD8A625-0E38-42AD-9907-9207077D501A}.Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{2FD8A625-0E38-42AD-9907-9207077D501A}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6}.Testing|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,6 +301,7 @@ Global
 		{07FA1DDC-C797-494E-8211-F98FD67CA681} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{18144F65-5A9A-4CD9-92EC-77D3AF223181} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{2FD8A625-0E38-42AD-9907-9207077D501A} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
+		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
