@@ -13,29 +13,41 @@ namespace FunWithTuples
             Console.WriteLine("***** Fun with Tuples *****\n");
             Console.WriteLine("=> First Example");
             (string, int, string) values = ("a", 5, "c");
-            Console.WriteLine($"First item: {values.Item1}");
-            Console.WriteLine($"Second item: {values.Item2}");
-            Console.WriteLine($"Third item: {values.Item3}");
+            Console.WriteLine
+                ($"First item: {values.Item1}");
+            Console.WriteLine
+                ($"Second item: {values.Item2}");
+            Console.WriteLine
+                ($"Third item: {values.Item3}");
             Console.WriteLine();
 
             Console.WriteLine("=> Using Named Properties");
-            (string FirstLetter, int TheNumber, string SecondLetter) valuesWithNames = ("a", 5, "c");
-            Console.WriteLine($"First item: {valuesWithNames.FirstLetter}");
-            Console.WriteLine($"Second item: {valuesWithNames.TheNumber}");
-            Console.WriteLine($"Third item: {valuesWithNames.SecondLetter}");
+            (string FirstLetter, int TheNumber, string SecondLetter) 
+                valuesWithNames = ("a", 5, "c");
+            Console.WriteLine
+                ($"First item: {valuesWithNames.FirstLetter}");
+            Console.WriteLine
+                ($"Second item: {valuesWithNames.TheNumber}");
+            Console.WriteLine
+                ($"Third item: {valuesWithNames.SecondLetter}");
             //Using the item notation still works!
             Console.WriteLine($"First item: {valuesWithNames.Item1}");
             Console.WriteLine($"Second item: {valuesWithNames.Item2}");
             Console.WriteLine($"Third item: {valuesWithNames.Item3}");
             Console.WriteLine();
             //Naming on the right
-            var valuesWithNames2 = (FirstLetter: "a", TheNumber: 5, SecondLetter: "c");
-            Console.WriteLine($"First item: {valuesWithNames2.FirstLetter}");
-            Console.WriteLine($"Second item: {valuesWithNames2.TheNumber}");
-            Console.WriteLine($"Third item: {valuesWithNames2.SecondLetter}");
+            var valuesWithNames2 = 
+                (FirstLetter: "a", TheNumber: 5, SecondLetter: "c");
+            Console.WriteLine
+                ($"First item: {valuesWithNames2.FirstLetter}");
+            Console.WriteLine
+                ($"Second item: {valuesWithNames2.TheNumber}");
+            Console.WriteLine
+                ($"Third item: {valuesWithNames2.SecondLetter}");
             Console.WriteLine();
             //Naming on both sides doesn't work
-            (int Field1, int Field2) example = (Custom1:5, Custom2:7);
+            (int Field1, int Field2) example = 
+                (Custom1:5, Custom2:7);
             //This next line won't even compile. Uncomment it to see the error.
             //Console.WriteLine($"Another test {example.Custom1}");
 
@@ -50,14 +62,16 @@ namespace FunWithTuples
             Console.WriteLine($"String is: {samples.b}");
             Console.WriteLine($"Boolean is: {samples.c}");
             Console.WriteLine();
+            var test = SplitNames("Philip F Japikse");
+            Console.WriteLine($"{test.first} {test.last}");
             var (first, _, last) = SplitNames("Philip F Japikse");
             Console.WriteLine($"{first} {last}");
             Console.WriteLine();
             Console.WriteLine("=> Deconstructing Tuples");
             Point p = new Point(7,5);
-            var pointValues = p.Deconstruct();
-            Console.WriteLine($"X is: {pointValues.XPos}");
-            Console.WriteLine($"Y is: {pointValues.YPos}");
+            var (XPos, YPos) = p.Deconstruct();
+            Console.WriteLine($"X is: {XPos}");
+            Console.WriteLine($"Y is: {YPos}");
             Console.WriteLine();
 
 
@@ -68,9 +82,11 @@ namespace FunWithTuples
         {
             return (9,"Enjoy your string.",true);
         }
-        static (string first, string middle, string last) SplitNames(string fullName)
+        static (string first, string middle, string last) 
+            SplitNames(string fullName)
         {
-            //do what is needed to split the name apart
+            // Действия, необходимые для расщепления 
+            // полного имени
             return ("Philip", "F", "Japikse");
         }
         #endregion
@@ -78,18 +94,17 @@ namespace FunWithTuples
         #region Simple structure
         struct Point
         {
-            // Fields of the structure.
             public int X;
             public int Y;
 
-            // A custom constructor.
             public Point(int XPos, int YPos)
             {
                 X = XPos;
                 Y = YPos;
             }
 
-            public (int XPos, int YPos) Deconstruct() => (X, Y);
+            public (int XPos, int YPos) 
+                Deconstruct() => (X, Y);
         }
         #endregion
 
