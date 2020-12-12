@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "pro-csharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithTuples", "pro-csharp-7-master\Chapter_4\FunWithTuples\FunWithTuples\FunWithTuples.csproj", "{6417A0AC-2D49-42B0-B408-FAE39B832F92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClassExample", "pro-csharp-7-master\Chapter_5\SimpleClassExample\SimpleClassExample\SimpleClassExample.csproj", "{FC6715AC-17D0-46F1-8F72-C6871354C3F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -282,6 +284,12 @@ Global
 		{6417A0AC-2D49-42B0-B408-FAE39B832F92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6417A0AC-2D49-42B0-B408-FAE39B832F92}.Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{6417A0AC-2D49-42B0-B408-FAE39B832F92}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0}.Testing|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -320,6 +328,7 @@ Global
 		{2898E6E8-CABC-4CEB-993B-E4C6AA8E5BC6} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{B8CA589E-C71F-4DAE-9722-0331596478B7} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 		{6417A0AC-2D49-42B0-B408-FAE39B832F92} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
+		{FC6715AC-17D0-46F1-8F72-C6871354C3F0} = {3CD6D99C-6F7F-4571-9F92-4E0BC21EFC76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13153B6E-D531-4872-82D3-52562F3F7110}
