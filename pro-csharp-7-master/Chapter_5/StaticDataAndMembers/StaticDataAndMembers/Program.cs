@@ -22,6 +22,15 @@ namespace StaticDataAndMembers
             Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
             Console.WriteLine("Interest Rate is: {0}", SavingsAccount.InterestRate);
 
+            // Это работает нормально
+            TimeUtilClass.PrintDate();
+            TimeUtilClass.PrintTime();
+            // Ошибка на этапе компиляции:
+            // Создавать экземпляры статического
+            // класса невозможно!
+            // TimeUtilClass u = new TimeUtilClass();
+
+
             Console.ReadLine();
         }
     }
